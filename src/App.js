@@ -1,16 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Page from './components/page/Page';
+import Navbar from './components/navbar/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Row, Container} from 'react-bootstrap'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       <h4>GAIA GALLERY</h4>
-  
-        <p>On Progress...</p>
-      </header>
-    </div>
+    <Container>
+      <Row>
+      <Navbar/>
+      </Row>
+      <Row>
+      <Page/>
+      </Row>
+    </Container>
+    
   );
 }
 
