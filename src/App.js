@@ -8,12 +8,12 @@ import {Row, Container} from 'react-bootstrap'
 function App() {
   return (
     <Container>
-      <Row>
+      
       <Navbar/>
-      </Row>
-      <Row>
+      
+      
       <Page/>
-      </Row>
+      
     </Container>
     
   );
