@@ -87,9 +87,9 @@ export default function Page() {
                 <Navbar bg="light" expand="lg" style={{ margin: '5px auto' }}>
                     <Navbar.Brand href="#home" style={{}}>GAIA Gallery</Navbar.Brand>
 
-                    <Form inline style={{ width: '50rem', margin: '8px auto' }}>
+                    <Form inline style={{ width: '50rem', margin: '8px auto',display:'flex', justifyContent:'center' }}>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2"
-                            style={{ width: '32rem', margin: ' auto' }} onChange={e => setTag(e.target.value)} />
+                            style={{ width: '16em'}} onChange={e => setTag(e.target.value)} />
                         <Button style={{ margin: 'auto 8px' }} variant="outline-success"  onClick={()=>search()}>Search</Button>
                     </Form>
                 </Navbar>
@@ -101,13 +101,13 @@ export default function Page() {
                 {imageSearch}
             </div> : null}
 
-            <div className="row mt-3" style={{ width: '5rem', margin: '8px auto' }}>
+            <div className="row mt-3" style={{ width: '5rem', margin: '8px auto' ,fontSize:'24px'}}>
                 {currentImage > 1 ?
                     <span
-                        onClick={() => changePage('back')}
+                        onClick={() => changePage('back')} 
                     ><FaCaretSquareLeft /></span>
                     : <span
-
+                        
                     ><FaCaretSquareLeft /></span>}
                 {maxImage > (currentImage * maxItem) ?
                     <span
