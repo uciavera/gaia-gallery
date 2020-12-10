@@ -34,7 +34,6 @@ export default function Page() {
     const searcha=()=>{
         axios.get(
             `http://localhost:3001/photos/search/${tag}`
-            // `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=ed9aeed6915893540672706939818b0c&tags=${tag}&format=json&nojsoncallback=1`
             )
             .then(response => setImage2(response.data.data.photos.photo))
     }
@@ -42,7 +41,6 @@ export default function Page() {
     useEffect(() => {
     axios.get(
         'http://localhost:3001/photos'
-    // 'https://www.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=ed9aeed6915893540672706939818b0c&gallery_id=72157647915728815&format=json&nojsoncallback=1'
 )
     .then(response => setImage(response.data.data.photos.photo))
 
