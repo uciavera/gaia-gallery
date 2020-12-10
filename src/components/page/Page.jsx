@@ -8,21 +8,21 @@ export default function Page() {
     const [tag, setTag] = useState(null);
     const [image, setImage] = useState([])
     const [image2, setImage2] = useState([])
-    const [currentClinic, setCurrentClinic] = useState(1)
+    const [currentImage, setCurrentImage] = useState(1)
     const [showImage, setShowImage] = useState(true)
     const [showSearch, setShowSearch] = useState(false)
     const maxItem = 4
 
-    var first = (currentClinic * maxItem) - maxItem
-    var last = currentClinic * maxItem
+    var first = (currentImage * maxItem) - maxItem
+    var last = currentImage * maxItem
 
 
 
     const changePage = (direction) => {
         if (direction === 'next') {
-            setCurrentClinic(currentClinic + 1)
+            setCurrentImage(currentImage + 1)
         } else if (direction === 'back') {
-            setCurrentClinic(currentClinic - 1)
+            setCurrentImage(currentImage - 1)
         }
     };
      const search=()=>{
@@ -79,7 +79,7 @@ export default function Page() {
         );
 
     });
-    const maxClinic = image && image.length - 1;
+    const maxImage = image && image.length - 1;
     
     return (
         <div>
@@ -102,14 +102,14 @@ export default function Page() {
             </div> : null}
 
             <div className="row mt-3" style={{ width: '5rem', margin: '8px auto' }}>
-                {currentClinic > 1 ?
+                {currentImage > 1 ?
                     <span
                         onClick={() => changePage('back')}
                     ><FaCaretSquareLeft /></span>
                     : <span
 
                     ><FaCaretSquareLeft /></span>}
-                {maxClinic > (currentClinic * maxItem) ?
+                {maxImage > (currentImage * maxItem) ?
                     <span
                         onClick={() => changePage('next')}
                     ><FaCaretSquareRight /></span>
